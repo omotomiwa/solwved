@@ -6,7 +6,8 @@ import * as Sentry from "@sentry/vue";
 export default boot(({ app, router }) => {
     Sentry.init({
       app,
-      dsn: process.env.VUE_SENTRY_URL || '',
+      //dsn: process.env.VUE_SENTRY_URL || '',
+      dsn: import.meta.env.VITE_SENTRY_URL || process.env.VUE_SENTRY_URL || '',
       integrations: [
         Sentry.browserTracingIntegration({ router }),
         Sentry.replayIntegration()
@@ -19,8 +20,8 @@ export default boot(({ app, router }) => {
 
       // Set `tracePropagationTargets` to control for which URLs trace propagation should be enabled
 
-      tracePropagationTargets: process.env.VUE_SENTRY_TRACE_PROPAGATION_TARGETS.split(',') ?? ["localhost"],
-
+      //tracePropagationTargets: process.env.VUE_SENTRY_TRACE_PROPAGATION_TARGETS.split(',') ?? ["localhost"],
+      tracePropagationTargets: (import.meta.env.VITE_SENTRY_TRACE_PROPAGATION_TARGETS || "localhost").split(","),
       // Capture Replay for 10% of all sessions,
       // plus for 100% of sessions with an error
       replaysSessionSampleRate: 0.1,
