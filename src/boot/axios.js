@@ -4,7 +4,8 @@ import { API } from "src/modules/ApiList.js"
 
 // import { LocalStorage } from 'quasar'
 
-let apiURL = process.env.VUE_APP_API_URL
+//let apiURL = process.env.VUE_APP_API_URL
+let apiURL = import.meta.env.VITE_API_URL || "http://localhost:3000"
 
 const config = {
   baseURL: apiURL,
