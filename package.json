@@ -1,0 +1,51 @@
+{
+  "name": "sowlved-ui-vite",
+  "version": "0.0.1",
+  "description": "Ready to SOWLVE how you manage, control and deliver services?",
+  "productName": "SOWLVED",
+  "author": "Hello@SOWLVED.com",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "lint": "eslint --ext .js,.vue ./",
+    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org sowlved-limited --project sowlved-fe ./.quasar && sentry-cli sourcemaps upload --org sowlved-limited --project sowlved-fe ./.quasar"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.2",
+    "@sentry/cli": "^2.36.6",
+    "@sentry/tracing": "^7.114.0",
+    "@sentry/vue": "^8.32.0",
+    "axios": "^0.21.1",
+    "crypto-js": "^4.2.0",
+    "echarts": "^5.4.0",
+    "luxon": "^3.1.0",
+    "mermaid": "^11.6.0",
+    "pdfjs-dist": "^4.8.69",
+    "qrcode": "^1.5.4",
+    "quasar": "^2.11.10",
+    "uuid": "^9.0.1",
+    "vue": "3",
+    "vue-currency-input": "^3.0.2",
+    "vue-echarts": "^6.2.3",
+    "vue-router": "4",
+    "vuedraggable": "^4.1.0",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.2.1",
+    "autoprefixer": "^10.4.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.5.1"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
