@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  VUE_APP_API_URL = "https://sowlved.liamsummersdev.co.uk"
+  VUE_APP_COOKIE_NAME = "sowlved_session"
+
+# Redirect all routes to index.html for Vue Router history mode
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
